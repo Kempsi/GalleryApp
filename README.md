@@ -1,7 +1,15 @@
 # GalleryApp
 
+___________________________________________________
+
 - Started right after finishing "todo" - app around 27.8.2024.
 - Finished as unfinished around 8.8.2024.
+
+___________________________________________________
+
+![pic1](https://github.com/user-attachments/assets/29de6428-bb42-425c-bed8-b4b02b657caf)
+
+![pic2](https://github.com/user-attachments/assets/df7d2a26-6dda-4381-8789-0ebc80270d63)
 
 ___________________________________________________
 
