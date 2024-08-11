@@ -1,0 +1,268 @@
+﻿<Window x:Class="GalleryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:UserControls="clr-namespace:GalleryApp.UserControls"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="800" 
+        Width="1200" 
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+
+
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0"
+                      CornerRadius="0"
+                      CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="myGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Rectangle Fill="#ffffff"
+                   MouseLeftButtonDown="doubleClickArea_MouseLeftButtonDown" 
+                   Grid.ColumnSpan="2">
+
+            <Rectangle.Effect>
+                <DropShadowEffect Color="Black"
+                                  BlurRadius="5"
+                                  ShadowDepth="1"/>
+            </Rectangle.Effect>
+
+
+
+
+        </Rectangle>
+
+
+        <StackPanel Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    x:Name="sp_LayoutButtons">
+
+            <UserControls:LayoutButton NormalImageSource="../Icons/layout_Icon.png" 
+                                       ActiveImageSource="../Icons/layout_Act_Icon.png"
+                                       x:Name="layoutButton1"
+                                       Margin="25,0,0,0" 
+                                       ButtonClick="Layout1_ButtonClick"/>
+            <UserControls:LayoutButton NormalImageSource="../Icons/category_Icon.png" 
+                                       ActiveImageSource="../Icons/category_Act_Icon.png"
+                                       x:Name="layoutButton2"
+                                       Margin="20,0,0,0"
+                                       ButtonClick="Layout2_ButtonClick"/>
+                                      
+            <UserControls:LayoutButton NormalImageSource="../Icons/grid_Icon.png" 
+                                       ActiveImageSource="../Icons/grid_Act_Icon.png"
+                                       x:Name="layoutButton3"
+                                       Margin="20,0,0,0"
+                                       ButtonClick="Layout3_ButtonClick"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+            <UserControls:ImportAndSelectAll ImageSource="../Icons/Delete_Icon.png"
+                                             Title="Delete"
+                                             MyFontSize="15"
+                                             Margin="0,0,25,0"
+                                             ButtonClick="DeleteSelected_ButtonClick"/>
+
+            <UserControls:ImportAndSelectAll ImageSource="../Icons/selectall_Act_Icon.png"
+                                             Title="Select all"
+                                             MyFontSize="15"
+                                             Margin="0,0,25,0"
+                                             ButtonClick="SelectAll_ButtonClick"/>
+
+            <UserControls:ImportAndSelectAll ImageSource="../Icons/import_Act_Icon.png"
+                                             Title="Import"
+                                             MyFontSize="15"
+                                             Margin="0,0,50,0" 
+                                             ButtonClick="Import_ButtonClick"/>
+
+            <UserControls:ProfilePictureButton NormalImageSource="../Icons/profile_Pic.png"
+                                               ActiveImageSource="../Icons/profile_Act_Pic.png"
+                                               Width="35"
+                                               Height="35" 
+                                               Margin="0,0,25,0"/>
+
+            <UserControls:SettingsButton NormalImageSource="../Icons/dotdotdot_Icon.png"
+                                         ActiveImageSource="../Icons/dotdotdot_Act_Icon.png" 
+                                         Width="25"
+                                         Height="25"
+                                         Margin="0,0,50,0"/>
+
+
+            <UserControls:WindowControlButton NormalImageSource="../Icons/min_Icon.png"
+                                              ActiveImageSource="../Icons/min_Act_Icon.png"
+                                              ButtonClick="btnMin_Click"
+                                              Margin="0,5,15,0"
+                                              Width="25"
+                                              Height="25"/>
+
+            <UserControls:WindowControlButton NormalImageSource="../Icons/max_Icon.png"
+                                              ActiveImageSource="../Icons/max_Act_Icon.png"
+                                              ButtonClick="btnMax_Click"
+                                              Margin="5,5,15,0"
+                                              Width="25"
+                                              Height="25"/>
+
+            <UserControls:WindowControlButton NormalImageSource="../Icons/close_Icon.png"
+                                              ActiveImageSource="../Icons/close_Act_Icon.png"
+                                              ButtonClick="btnClose_Click"
+                                              Margin="0,5,15,0" 
+                                              Width="25"
+                                              Height="25"/>
+
+
+        </StackPanel>
+
+        
+        
+        
+        
+        
+        
+        <Frame Name="MainFrame" 
+               NavigationUIVisibility="Hidden" 
+               Grid.Column="1" 
+               Grid.Row="1"
+               Background="#FFCBCBCB">
+
+            <Frame.Effect>
+                <DropShadowEffect Color="Black"
+                                  BlurRadius="5"
+                                  ShadowDepth="1"/>
+            </Frame.Effect>
+
+        </Frame>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <Grid>
+            <Ellipse Width="40"
+                     Height="40"
+                     Fill="#FFCDD6DD"
+                     Margin="0,0,132.5,0">
+                
+                <Ellipse.Effect>
+                    <DropShadowEffect Color="DarkGray"
+                                      BlurRadius="5"
+                                      ShadowDepth="1"/>
+                </Ellipse.Effect>
+                
+                
+            </Ellipse>
+        </Grid>
+        
+        <StackPanel Background="Transparent"
+                    x:Name="sp_CollapsedCategories"
+                    Visibility="Collapsed" Margin="0,0,134,0">
+
+
+            <UserControls:CategoryButton HorizontalAlignment="Left" 
+                                         Margin="21,15,0,0" 
+                                         Width="25"
+                                         Height="25"
+                                         x:Name="cb_CollapsedCategoryButton"
+                                         NormalImageSource="../Icons/sidebar_Icon.png"
+                                         ActiveImageSource="../Icons/sidebar_Act_Icon.png"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" 
+                    Grid.RowSpan="2" 
+                    Background="#FFCDD6DD"
+                    x:Name="sp_MainCategories"
+                    Visibility="Visible">
+
+            <StackPanel.Effect>
+                <DropShadowEffect Color="DarkGray"
+                                  BlurRadius="10"
+                                  ShadowDepth="1"/>
+            </StackPanel.Effect>
+
+            <UserControls:CategoryButton HorizontalAlignment="Left" 
+                                         Margin="21,15,0,0" 
+                                         Width="25"
+                                         Height="25"
+                                         x:Name="cb_CategoryButton"
+                                         NormalImageSource="../Icons/sidebar_Icon.png"
+                                         ActiveImageSource="../Icons/sidebar_Act_Icon.png"/>
+
+            <UserControls:SideButton Title="Collection" 
+                                     x:Name="btn_Collection"
+                                     Margin="5,30,0,5"
+                                     MyFontSize="18"
+                                     ButtonClick="btn_Collection_ButtonClick"
+                                     ImageSource="../Icons/collection_Icon.png"/>
+
+            <UserControls:SideButton Title="Favorites"
+                                     x:Name="btn_Favourites"
+                                     Margin="5,20,0,5"
+                                     MyFontSize="18"
+                                     ButtonClick="btn_Favourites_ButtonClick"
+                                     ImageSource="../Icons/favourite_Icon.png" />
+
+            <UserControls:SideButton Title="Recents"
+                                     x:Name="btn_Recents"
+                                     Margin="5,20,0,5"
+                                     MyFontSize="18"
+                                     ButtonClick="btn_Recents_ButtonClick"
+                                     ImageSource="../Icons/recent_Icon.png"/>
+
+            <Rectangle Fill="DarkGray" 
+                       Height="1" 
+                       Margin="0,10,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,9">
+
+
+                <Label Content="Albums"
+                   Margin="19,0,54,5"
+                   Foreground="#FF4D4D4D"
+                   Background="Transparent"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   FontFamily="Segoe UI"
+                   FontSize="18"/>
+
+                <UserControls:AddAlbumButton Margin="14,0,0,0" 
+                                             Height="32" 
+                                             Width="43"/>
+
+
+
+
+            </StackPanel>
+
+
+
+
+
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>

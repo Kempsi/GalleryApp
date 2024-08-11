@@ -1,0 +1,145 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\FjallaOneRegular.ttf" />
+    <None Remove="Fonts\karantina.ttf" />
+    <None Remove="Fonts\PlayfairDisplay-Black.ttf" />
+    <None Remove="Fonts\Rubik-Medium.ttf" />
+    <None Remove="Fonts\Rubik-Regular.ttf" />
+    <None Remove="Icons\category_Act_Icon.png" />
+    <None Remove="Icons\category_Icon.png" />
+    <None Remove="Icons\close_Act_Icon.png" />
+    <None Remove="Icons\close_Icon.png" />
+    <None Remove="Icons\collection_Icon.png" />
+    <None Remove="Icons\delete_Icon.png" />
+    <None Remove="Icons\dotdotdot_Act_Icon.png" />
+    <None Remove="Icons\dotdotdot_Icon.png" />
+    <None Remove="Icons\favourite_Icon.png" />
+    <None Remove="Icons\grid_Act_Icon.png" />
+    <None Remove="Icons\grid_Icon.png" />
+    <None Remove="Icons\import_Act_Icon.png" />
+    <None Remove="Icons\import_Icon.png" />
+    <None Remove="Icons\layout_Act_Icon.png" />
+    <None Remove="Icons\layout_Icon.png" />
+    <None Remove="Icons\max_Act_Icon.png" />
+    <None Remove="Icons\max_Icon.png" />
+    <None Remove="Icons\min_Act_Icon.png" />
+    <None Remove="Icons\min_Icon.png" />
+    <None Remove="Icons\profile_Act_Pic.png" />
+    <None Remove="Icons\profile_Pic.png" />
+    <None Remove="Icons\recent_Icon.png" />
+    <None Remove="Icons\selectall_Act_Icon.png" />
+    <None Remove="Icons\selectall_Icon.png" />
+    <None Remove="Icons\sidebar_Act_Icon.png" />
+    <None Remove="Icons\sidebar_Icon.png" />
+    <None Remove="Icons\today_Icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\FjallaOneRegular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\karantina.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\PlayfairDisplay-Black.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Rubik-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Rubik-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\category_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\category_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\close_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\close_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\collection_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\delete_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\dotdotdot_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\dotdotdot_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\favourite_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\grid_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\grid_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\import_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\import_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\layout_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\layout_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\max_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\max_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\min_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\min_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\profile_Act_Pic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\profile_Pic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\recent_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\selectall_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\selectall_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\sidebar_Act_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\sidebar_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\today_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="GalleryApp.UserControls.LayoutButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GalleryApp.UserControls"
+             mc:Ignorable="d" 
+             x:Name="layoutButtonControl"
+             d:DesignHeight="55" d:DesignWidth="50">
+
+
+    <Button Background="Transparent" 
+            BorderBrush="Transparent" 
+            Click="Button_Click" 
+            MouseEnter="Button_MouseEnter"
+            MouseLeave="Button_MouseLeave"
+>
+
+        <Button.Template>
+            <ControlTemplate TargetType="Button">
+                <Border CornerRadius="15" 
+                        Background="Transparent" 
+                        x:Name="border">
+
+
+                    <StackPanel Orientation="Vertical">
+
+                        <Rectangle x:Name="selectedRect" 
+                                   Fill="#FF0B6CCF"
+                                   Width="35"
+                                   Height="4"
+                                   RadiusX="2"
+                                   RadiusY="2"
+                                   Opacity="0"
+                                   Margin="0,45,0,0"
+                                   />
+                        
+
+
+                        <Image x:Name="imageIcon"
+                               Source="{Binding ImageSource}"
+                               Width="18"
+                               Height="18" 
+                               Margin="0,-45,0,0"/>
+
+
+
+
+                    </StackPanel>
+
+
+                </Border>
+
+
+
+
+                <!--<ControlTemplate.Triggers>
+
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter TargetName="selectedRect" Property="Opacity" Value="100"/>
+                    </Trigger>
+                    
+                </ControlTemplate.Triggers>-->
+                
+                
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+</UserControl>

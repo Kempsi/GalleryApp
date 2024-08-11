@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="GalleryApp.UserControls.ProfilePictureButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GalleryApp.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="35">
+    
+    <Button Background="Transparent" 
+            BorderBrush="Transparent" 
+            Click="Button_Click"
+            MouseEnter="Button_MouseEnter"
+            MouseLeave="Button_MouseLeave">
+
+
+        <Button.Template>
+
+            <ControlTemplate TargetType="Button">
+
+                <Border Background="Transparent">
+
+                    <Grid>
+                        <Image Source="{Binding ImageSource}"
+                         Width="35"
+                         Height="35"
+                         x:Name="imageIcon" Margin="0,0,0,0"/>
+                    </Grid>
+
+
+                </Border>
+
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+</UserControl>
