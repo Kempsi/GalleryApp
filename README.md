@@ -1,5 +1,6 @@
 # GalleryApp
-
+- C# WPF Desktop
+- Modern Gallery app
 ___________________________________________________
 
 - Started right after finishing "todo" - app around 27.8.2024.
