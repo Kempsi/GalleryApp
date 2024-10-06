@@ -24,7 +24,7 @@ ___________________________________________________
   logic into the actual software, that's when the problems started to appear.
 
 - I've been trying to slowly learn MVVM-model, but at the moment it seems really difficult to understand
-  and I think this project would have needed it badly to be actually develop further.
+  and I think this project would have needed it badly to be actually developed further.
 
 - In the end, I'm glad I tried to do this and learnt a lot once again.
 ___________________________________________________
